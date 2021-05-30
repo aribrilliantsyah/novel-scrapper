@@ -1,6 +1,6 @@
 const axios = require("axios").default;
 const Env = use('Env');
-axios.defaults.baseURL = Env.get('URL_TARGET', '');
+axios.defaults.baseURL = Env.get('URL_TARGET', 'https://meionovel.id/');
 
 class AxiosServ {
   async get(path) {

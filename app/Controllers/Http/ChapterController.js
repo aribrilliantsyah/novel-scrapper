@@ -2,7 +2,7 @@
 const AxiosServ = require('../../Helpers/AxiosServ');
 const cheerio = require('cheerio');
 const Env = use('Env');
-const urlTarget = Env.get('URL_TARGET', '');
+const urlTarget = Env.get('URL_TARGET', 'https://meionovel.id/');
 const fetch = require('node-fetch');
 
 

@@ -23,6 +23,7 @@ Route.get('/', () => {
 Route.group(() => {
   Route.get('test', 'NovelController.test')
   Route.get('/', 'NovelController.read')
+  Route.get('/:novel_slug', 'NovelController.detail')
   Route.get('/:novel_slug/:tl_type/:chapter_slug', 'ChapterController.detail')
 }).prefix('novel').middleware(['token'])
 

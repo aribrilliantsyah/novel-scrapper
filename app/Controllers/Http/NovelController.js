@@ -3,7 +3,7 @@ const { default: axios } = require('axios');
 const AxiosServ = require('../../Helpers/AxiosServ');
 const cheerio = require('cheerio');
 const Env = use('Env');
-const urlTarget = Env.get('URL_TARGET', '');
+const urlTarget = Env.get('URL_TARGET', 'https://meionovel.id/');
 
 class NovelController {
   async test({request, response}) {
@@ -45,7 +45,7 @@ class NovelController {
         let title, rating, cover, link, slug, chapters;
         // console.log(parent.html());
         parent.find('.page-item-detail').each((i, el) => {
-          title = $(el).find('.item-summary a').text().trim();
+          title = $(el).find('.item-summary div.post-title a').text().trim();
           rating = $(el).find('.rating').text().trim();
           cover = $(el).find('.item-thumb img').attr('data-src').trim();
           link = $(el).find('.item-summary a').attr('href').trim();
@@ -101,7 +101,7 @@ class NovelController {
   async detail({request, response, params}) {
     let req = params;
     // console.log(req); return;
-    let path = `novel/${req.slug}`;
+    let path = `novel/${req.novel_slug}`;
     let detail_novel = [];
     let srv = new AxiosServ();
 

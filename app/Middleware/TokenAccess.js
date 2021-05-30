@@ -28,7 +28,7 @@ class TokenAccess {
       // console.log(token_array[1])
       if(token_array[1] != undefined){
         console.log(token_array[1])
-        let token_key = Env.get('TOKEN_KEY', '')
+        let token_key = Env.get('TOKEN_KEY', 'uhArigantengBangetuWow')
         if(token_key != '' ){
           if(token_array[1] == token_key){
             await session.put('username', '')

@@ -1,12 +1,6 @@
-# Adonis API application
+# Unofficial meionovel.id Rest API 
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
-
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+This is Unofficial Rest API from scrapper method, The api use AdonisJS
 
 ## Setup
 
@@ -18,11 +12,3 @@ adonis new yardstick --api-only
 
 or manually clone the repo and then run `npm install`.
 
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```

@@ -37,7 +37,9 @@
     "sha3": "^2.1.4",
     "uuid-token-generator": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@vercel/node": "^1.10.0"
+  },
   "autoload": {
     "App": "./app"
   }
